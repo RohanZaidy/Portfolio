@@ -3,7 +3,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#home">
-        <span class="brand-text">Rohan's Portfolio</span>
+        <span class="brand-text p-3">Rohan's Portfolio</span>
       </a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -51,18 +51,17 @@
             Ready to bring innovative solutions to your development team.
           </p>
           <div class="hero-buttons">
-            <button class="btn btn-primary btn-lg me-3" (click)="scrollToSection('projects')">
+            <button class="btn btn-outline-light btn-lg me-3 p-1" (click)="scrollToSection('projects')">
               View My Work
             </button>
-            <button class="btn btn-outline-light btn-lg" (click)="scrollToSection('contact')">
+            <button class="btn btn-outline-light btn-lg p-1" (click)="scrollToSection('contact')">
               Get In Touch
             </button>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-12 text-center">
+      <div class="col-lg-6 col-md-12 text-center mt-2">
         <div class="hero-image">
-          <!-- Replace with your profile picture URL -->
           <img src="/IMG_4370.JPG" alt="Profile Picture" class="profile-img">
         </div>
       </div>
@@ -77,7 +76,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title">About Myself</h2>
+        <h2 class="section-title"><u>About Myself</u></h2>
         <div class="title-underline"></div>
       </div>
     </div>
@@ -124,7 +123,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title text-black">My Skills</h2>
+        <h2 class="section-title text-black"><u>My Skills</u></h2>
         <div class="title-underline"></div>
       </div>
     </div>
@@ -188,13 +187,13 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title">My Projects</h2>
+        <h2 class="section-title"><u>My Projects</u></h2>
         <p>The projects are not live yet but you can see my work on Youtube vieo by clicking on Youtube Demo</p>
         <div class="title-underline"></div>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let project of projects">
+      <div class="col-lg-4 col-md-6 mb-4 p-2" *ngFor="let project of projects">
         <div class="project-card">
           <div class="project-image">
             <img [src]="project.image" [alt]="project.title" class="img-fluid">
@@ -207,7 +206,7 @@
             </div>
           </div>
           <div class="project-content">
-            <a [href]="project.DemoVideo" target="_blank" class="btn btn-primary btn-sm me-2" *ngIf="project.DemoVideo">
+            <a [href]="project.DemoVideo" target="_blank" class="btn btn-warning btn-sm me-2" *ngIf="project.DemoVideo">
                   See Demo
                 </a>
             <h4 class="project-title">{{ project.title }}</h4>
@@ -227,7 +226,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title text-white">Resume</h2>
+        <h2 class="section-title text-black"><u>Resume</u></h2>
         <div class="title-underline"></div>
       </div>
     </div>
@@ -250,7 +249,7 @@
     </div>
     <div class="row mt-4">
       <div class="col-12 text-center">
-        <a href="<!-- RESUME_PDF_URL -->" target="_blank" class="btn btn-primary btn-lg">
+        <a href="/Rohan'sCV.pdf" class="btn btn-outline-warning text-white p-2 btn-lg">
           Download Resume
         </a>
       </div>
@@ -263,7 +262,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title">Get In Touch</h2>
+        <h2 class="section-title"><u>Get In Touch</u></h2>
         <div class="title-underline"></div>
       </div>
     </div>
@@ -308,7 +307,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <p class="footer-text">
+        <p class="footer-text text-black">
           © 2025 Rohan Zaidy. Made with Angular 19
         </p>
       </div>
