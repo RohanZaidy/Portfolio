@@ -207,6 +207,9 @@
             </div>
           </div>
           <div class="project-content">
+            <a [href]="project.DemoVideo" target="_blank" class="btn btn-primary btn-sm me-2" *ngIf="project.DemoVideo">
+                  See Demo
+                </a>
             <h4 class="project-title">{{ project.title }}</h4>
             <p class="project-description">{{ project.description }}</p>
             <div class="project-tech">
