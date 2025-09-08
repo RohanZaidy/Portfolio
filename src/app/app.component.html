@@ -1,34 +1,45 @@
 <!-- Header Section -->
-<header class="header-section mb-5">
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#home">
-        <span class="brand-text p-3">Rohan's Portfolio</span>
+<header class="header-section">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
+    style="background: rgba(10, 10, 10, 0.95) !important; backdrop-filter: blur(20px); border-bottom: 1px solid #333;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#home" (click)="scrollToSection('home')">
+        <span class="brand-text m-3"
+          style="font-size: 1.8rem; font-weight: 700; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Rohan's
+          Portfolio</span>
       </a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" (click)="scrollToSection('home')">Home</a>
+            <a class="nav-link" href="#home" (click)="scrollToSection('home'); closeMobileNav()"
+              style="color: #fff !important; cursor: pointer;">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="scrollToSection('about')">About</a>
+            <a class="nav-link" href="#about" (click)="scrollToSection('about'); closeMobileNav()"
+              style="color: #fff !important; cursor: pointer;">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="scrollToSection('skills')">Skills</a>
+            <a class="nav-link" href="#skills" (click)="scrollToSection('skills'); closeMobileNav()"
+              style="color: #fff !important; cursor: pointer;">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="scrollToSection('projects')">Projects</a>
+            <a class="nav-link" href="#projects" (click)="scrollToSection('projects'); closeMobileNav()"
+              style="color: #fff !important; cursor: pointer;">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="scrollToSection('resume')">Resume</a>
+            <a class="nav-link" href="#resume" (click)="scrollToSection('resume'); closeMobileNav()"
+              style="color: #fff !important; cursor: pointer;">Resume</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="scrollToSection('contact')">Contact</a>
+            <a class="nav-link" href="#contact" (click)="scrollToSection('contact'); closeMobileNav()"
+              style="color: #fff !important; cursor: pointer;">Contact</a>
           </li>
         </ul>
       </div>
@@ -37,81 +48,165 @@
 </header>
 
 <!-- Home Section -->
-<section id="home" class="hero-section d-flex align-items-center">
-  <div class="container">
-    <div class="row align-items-center ms-2">
-      <div class="col-lg-6 col-md-12">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            Hi, I'm <span class="highlight">Rohan Zaidy</span>
-          </h1>
-          <h2 class="hero-subtitle">Junior Web Developer</h2>
-          <p class="hero-description">
-            Passionate about creating modern web applications with Angular 19 and ASP.NET Web API. 
-            Ready to bring innovative solutions to your development team.
-          </p>
-          <div class="hero-buttons">
-            <button class="btn btn-outline-light btn-lg me-3 p-1" (click)="scrollToSection('projects')">
-              View My Work
-            </button>
-            <button class="btn btn-outline-light btn-lg p-1" (click)="scrollToSection('contact')">
-              Get In Touch
-            </button>
+<section id="home" class="hero-section d-flex align-items-center"
+  style="min-height: 100vh; background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 0, 110, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 80%, rgba(255, 190, 11, 0.1) 0%, transparent 50%), #0a0a0a; position: relative; overflow: hidden;">
+  <div class="container-fluid">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-6 col-md-12 order-2 order-lg-1">
+        <div class="hero-content" style="position: relative; z-index: 2; padding: 2rem 0;">
+          <div class="hero-animation">
+            <span class="greeting"
+              style="font-size: 1.2rem; color: #00d4ff; font-weight: 500; display: block; margin-bottom: 1rem;">Hello,
+              I'm</span>
+            <h1 class="hero-title" style="font-size: 4rem; font-weight: 800; margin-bottom: 1rem; color: #fff;">
+              <span class="highlight typing-animation"
+                style="background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Rohan
+                Zaidy</span>
+            </h1>
+            <h2 class="hero-subtitle" style="font-size: 2.5rem; font-weight: 600; color: #fff; margin-bottom: 2rem;">
+              Full Stack Developer</h2>
+            <p class="hero-description"
+              style="font-size: 1.2rem; color: #b0b0b0; margin-bottom: 2rem; max-width: 600px;">
+              Passionate about creating modern web applications with MEAN stack and .net technologies.
+              Ready to bring innovative solutions to your development team.
+            </p>
+            <div class="hero-buttons mb-4">
+              <button class="btn me-3" (click)="scrollToSection('projects')"
+                style="background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border: none; color: #fff; padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                <i class="fas fa-code"></i> View My Work
+              </button>
+              <button class="btn" (click)="scrollToSection('contact')"
+                style="background: transparent; border: 2px solid #00d4ff; color: #00d4ff; padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                <i class="fas fa-envelope"></i> Get In Touch
+              </button>
+            </div>
+            <div class="tech-stack mt-4" style="display: flex; gap: 1.5rem;">
+              <!-- Angular -->
+              <span class="tech-icon" style="font-size: 2.5rem; color: #b0b0b0;">
+                <i class="fab fa-angular"></i>
+              </span>
+
+              <!-- Node.js -->
+              <span class="tech-icon" style="font-size: 2.5rem; color: #b0b0b0;">
+                <i class="fab fa-node-js"></i>
+              </span>
+
+              <!-- React -->
+              <span class="tech-icon" style="font-size: 2.5rem; color: #b0b0b0;">
+                <i class="fab fa-react"></i>
+              </span>
+
+              <!-- .NET / C# (using code icon as substitute) -->
+              <span class="tech-icon" style="font-size: 2.5rem; color: #b0b0b0;">
+                <i class="fas fa-code"></i>
+              </span>
+
+              <!-- SQL (using database icon as substitute) -->
+              <span class="tech-icon" style="font-size: 2.5rem; color: #b0b0b0;">
+                <i class="fas fa-database"></i>
+              </span>
+
+              <!-- MongoDB (not in Font Awesome, so using leaf as substitute) -->
+              <span class="tech-icon" style="font-size: 2.5rem; color: #4DB33D;">
+                <i class="fas fa-leaf"></i>
+              </span>
+
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-12 text-center mt-2">
+      <div class="col-lg-6 col-md-12 text-center order-1 order-lg-2">
         <div class="hero-image">
-          <img src="/IMG_4370.JPG" alt="Profile Picture" class="profile-img">
+          <div class="profile-container" style="position: relative; display: inline-block;">
+            <img src="./Rohan.jpg" alt="Profile Picture" class="profile-img"
+              style="width: 350px; height: 380px; border-radius: 20px; object-fit: cover; border: 3px solid #00d4ff; position: relative; z-index: 2;">
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="scroll-indicator">
-    <div class="scroll-arrow" (click)="scrollToSection('about')"></div>
+  <div class="scroll-indicator"
+    style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 2;">
+    <div class="scroll-arrow" (click)="scrollToSection('about')"
+      style="width: 30px; height: 30px; border: 2px solid #00d4ff; border-top: none; border-left: none; transform: rotate(45deg); cursor: pointer;">
+    </div>
   </div>
 </section>
+
 <!-- About Section -->
-<section id="about" class="about-section py-5">
-  <div class="container">
-    <div class="row">
+<section id="about" class="about-section py-5" style="background: #0a0a0a; padding: 5rem 0;">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title"><u>About Myself</u></h2>
-        <div class="title-underline"></div>
+        <h2 class="section-title"
+          style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          About Myself</h2>
+        <div class="title-underline"
+          style="width: 80px; height: 4px; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); margin: 0 auto 2rem; border-radius: 2px;">
+        </div>
       </div>
     </div>
-    <div class="row align-items-center ms-2">
-      <div class="col-lg-6 col-md-12 mb-4">
-        <h3 class="about-title">Get to know me!</h3>
-        <p class="about-text">
-          <!-- Add your personal story here -->
-          I'm a passionate Junior Web Developer with a strong foundation in modern web technologies. 
-          I specialize in creating responsive, user-friendly applications using Angular 19 for frontend 
-          development and ASP.NET Web API for robust backend solutions.
-        </p>
-        <p class="about-text">
-          <!-- Add more about your journey, interests, and goals -->
-          My journey in web development started with curiosity and has grown into a passion for 
-          creating meaningful digital experiences. I'm currently seeking opportunities for a job or internship where I can apply my skills, contribute to real-world projects, and continue growing as a software developer.
-        </p>
-        <button class="btn btn-primary" (click)="scrollToSection('contact')">
-          Let's Connect
-        </button>
-      </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="about-stats">
-          <div class="stat-item">
-            <h4>6</h4>
-            <p>Projects Completed</p>
+    <div class="row align-items-center">
+      <div class="col-lg-8 col-md-12 mx-auto">
+        <div class="about-card"
+          style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); padding: 3rem; border-radius: 20px; border: 1px solid #333; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
+          <h3 class="about-title"
+            style="font-size: 2.5rem; color: #fff; margin-bottom: 2rem; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            Get to know me!</h3>
+          <p class="about-text" style="font-size: 1.2rem; color: #b0b0b0; margin-bottom: 2rem; line-height: 1.8;">
+            I'm a passionate Full Stack Developer specializing in the MEAN stack with expertise in
+            Angular , Node.js, Express.js, and MongoDB. I also have strong experience with
+            ASP.NET Web API and SQL Server for enterprise-level applications.
+          </p>
+          <p class="about-text" style="font-size: 1.2rem; color: #b0b0b0; margin-bottom: 2rem; line-height: 1.8;">
+            My journey in web development started with curiosity and has grown into a passion for
+            creating meaningful digital experiences. I'm currently seeking opportunities for a job or
+            internship where I can apply my skills, contribute to real-world projects, and continue
+            growing as a software developer.
+          </p>
+          <div class="about-stats-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; margin: 3rem 0;">
+            <div class="stat-card"
+              style="text-align: center; padding: 2rem; background: rgba(0, 212, 255, 0.1); border-radius: 15px; border: 1px solid #333;">
+              <div class="stat-number"
+                style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">
+                10</div>
+              <div class="stat-label"
+                style="color: #b0b0b0; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Projects
+                Completed</div>
+            </div>
+            <div class="stat-card"
+              style="text-align: center; padding: 2rem; background: rgba(0, 212, 255, 0.1); border-radius: 15px; border: 1px solid #333;">
+              <div class="stat-number"
+                style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">
+                2</div>
+              <div class="stat-label"
+                style="color: #b0b0b0; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Years of
+                Learning</div>
+            </div>
+            <div class="stat-card"
+              style="text-align: center; padding: 2rem; background: rgba(0, 212, 255, 0.1); border-radius: 15px; border: 1px solid #333;">
+              <div class="stat-number"
+                style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">
+                8+</div>
+              <div class="stat-label"
+                style="color: #b0b0b0; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Technologies
+              </div>
+            </div>
+            <div class="stat-card"
+              style="text-align: center; padding: 2rem; background: rgba(0, 212, 255, 0.1); border-radius: 15px; border: 1px solid #333;">
+              <div class="stat-number"
+                style="font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">
+                100%</div>
+              <div class="stat-label"
+                style="color: #b0b0b0; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Dedication
+              </div>
+            </div>
           </div>
-          <div class="stat-item">
-            <h4>11</h4>
-            <p>Months Learning</p>
-          </div>
-          <div class="stat-item">
-            <h4>3</h4>
-            <p>Technologies</p>
-          </div>
+          <button class="btn mt-4" (click)="scrollToSection('contact')"
+            style="background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border: none; color: #fff; padding: 0.75rem 2rem; border-radius: 50px; font-weight: 600;">
+            Let's Connect
+          </button>
         </div>
       </div>
     </div>
@@ -119,63 +214,253 @@
 </section>
 
 <!-- Skills Section -->
-<section id="skills" class="skills-section py-5">
-  <div class="container">
+<section id="skills" class="skills-section py-5" style="background: #1a1a1a; padding: 5rem 0;">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title text-black"><u>My Skills</u></h2>
-        <div class="title-underline"></div>
+        <h2 class="section-title"
+          style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Technical Skills</h2>
+        <div class="title-underline"
+          style="width: 80px; height: 4px; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); margin: 0 auto 2rem; border-radius: 2px;">
+        </div>
+        <p class="section-subtitle" style="font-size: 1.2rem; color: #b0b0b0; margin-bottom: 2rem;">Modern technologies
+          I work with</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-5 col-md-12 mb-4 me-5 p-1">
-        <h3 class="skills-category text-black">Frontend Technologies</h3>
-        <div class="skill-item" *ngFor="let skill of frontendSkills">
-          <div class="skill-info">
-            <span class="skill-name">{{ skill.name }}</span>
-            <span class="skill-percentage">{{ skill.level }}%</span>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" [style.width.%]="skill.level"></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12 mb-4 p-1">
-        <h3 class="skills-category text-black">Backend Technologies</h3>
-        <div class="skill-item" *ngFor="let skill of backendSkills">
-          <div class="skill-info">
-            <span class="skill-name">{{ skill.name }}</span>
-            <span class="skill-percentage">{{ skill.level }}%</span>
-          </div>
-          <div class="progress">
-            <div class="progress-bar" [style.width.%]="skill.level"></div>
+
+    <!-- MEAN Stack Highlight -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="mean-stack-banner"
+          style="background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); padding: 3rem; border-radius: 20px; text-align: center; margin-bottom: 4rem; position: relative; overflow: hidden;">
+          <h3 class="mean-title" style="font-size: 3rem; font-weight: 800; color: #fff; margin-bottom: 2rem;">MEAN Stack
+            Developer</h3>
+          <div class="mean-icons" style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+            <div class="mean-icon"
+              style="display: flex; flex-direction: column; align-items: center; color: #fff; font-size: 3rem;">
+              <i class="fas fa-leaf"></i>
+              <span
+                style="font-size: 1rem; font-weight: 600; margin-top: 1rem; text-transform: uppercase; letter-spacing: 1px;">MongoDB</span>
+            </div>
+            <div class="mean-icon"
+              style="display: flex; flex-direction: column; align-items: center; color: #fff; font-size: 3rem;">
+              <i class="fas fa-server"></i>
+              <span
+                style="font-size: 1rem; font-weight: 600; margin-top: 1rem; text-transform: uppercase; letter-spacing: 1px;">Express.js</span>
+            </div>
+            <div class="mean-icon"
+              style="display: flex; flex-direction: column; align-items: center; color: #fff; font-size: 3rem;">
+              <i class="fab fa-angular"></i>
+              <span
+                style="font-size: 1rem; font-weight: 600; margin-top: 1rem; text-transform: uppercase; letter-spacing: 1px;">Angular</span>
+            </div>
+            <div class="mean-icon"
+              style="display: flex; flex-direction: column; align-items: center; color: #fff; font-size: 3rem;">
+              <i class="fab fa-node-js"></i>
+              <span
+                style="font-size: 1rem; font-weight: 600; margin-top: 1rem; text-transform: uppercase; letter-spacing: 1px;">Node.js</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Skills Grid -->
     <div class="row">
-         <div class="col-lg-5 col-md-12 mb-4 me-5 p-1">
-        <h3 class="skills-category text-black">Other Skills</h3>
-        <div class="skill-item" *ngFor="let skill of OtherSkills">
-          <div class="skill-info">
-            <span class="skill-name">{{ skill.name }}</span>
-            <span class="skill-percentage">{{ skill.level }}%</span>
+      <div class="col-12">
+        <div class="skills-container">
+          <!-- Frontend Skills -->
+          <div class="skill-category mb-4">
+            <h4 class="category-title mb-3"
+              style="font-size: 1.6rem; color: #fff; display: flex; align-items: center; gap: 0.8rem;">
+              <i class="fas fa-laptop-code" style="color: #00d4ff; font-size: 2rem;"></i>
+              Frontend Development
+            </h4>
+
+            <div class="skills-grid"
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+
+              <div class="skill-card" *ngFor="let skill of frontendSkills" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); 
+             padding: 1rem 1.2rem; 
+             border-radius: 12px; 
+             border: 1px solid #333; 
+             display: flex; 
+             align-items: center; 
+             gap: 1rem;">
+
+                <!-- Icon -->
+                <div class="skill-icon" style="font-size: 1.8rem; color: #00d4ff; min-width: 40px;">
+                  <i [class]="skill.icon"></i>
+                </div>
+
+                <!-- Info -->
+                <div class="skill-info" style="flex: 1;">
+                  <h5 class="skill-name" style="font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 0.3rem;">
+                    {{ skill.name }}
+                  </h5>
+                  <div class="skill-level" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div class="skill-progress" style="flex: 1; height: 6px; background: rgba(255, 255, 255, 0.1); 
+                   border-radius: 6px; overflow: hidden;">
+                      <div class="progress-fill" [style.width.%]="skill.level"
+                        style="height: 100%; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border-radius: 6px;">
+                      </div>
+                    </div>
+                    <span class="skill-percentage"
+                      style="font-size: 0.85rem; font-weight: 600; color: #00d4ff; min-width: 35px;">
+                      {{ skill.level }}%
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div class="progress">
-            <div class="progress-bar" [style.width.%]="skill.level"></div>
+
+
+          <!-- Backend Skills -->
+          <div class="skill-category mb-4">
+            <h4 class="category-title mb-3"
+              style="font-size: 1.6rem; color: #fff; display: flex; align-items: center; gap: 0.8rem;">
+              <i class="fas fa-laptop-code" style="color: #00d4ff; font-size: 2rem;"></i>
+              Backend Development
+            </h4>
+
+            <div class="skills-grid"
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+
+              <div class="skill-card" *ngFor="let skill of backendSkills" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); 
+             padding: 1rem 1.2rem; 
+             border-radius: 12px; 
+             border: 1px solid #333; 
+             display: flex; 
+             align-items: center; 
+             gap: 1rem;">
+
+                <!-- Icon -->
+                <div class="skill-icon" style="font-size: 1.8rem; color: #00d4ff; min-width: 40px;">
+                  <i [class]="skill.icon"></i>
+                </div>
+
+                <!-- Info -->
+                <div class="skill-info" style="flex: 1;">
+                  <h5 class="skill-name" style="font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 0.3rem;">
+                    {{ skill.name }}
+                  </h5>
+                  <div class="skill-level" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div class="skill-progress" style="flex: 1; height: 6px; background: rgba(255, 255, 255, 0.1); 
+                   border-radius: 6px; overflow: hidden;">
+                      <div class="progress-fill" [style.width.%]="skill.level"
+                        style="height: 100%; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border-radius: 6px;">
+                      </div>
+                    </div>
+                    <span class="skill-percentage"
+                      style="font-size: 0.85rem; font-weight: 600; color: #00d4ff; min-width: 35px;">
+                      {{ skill.level }}%
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12 mb-4 p-1">
-        <h3 class="skills-category text-black">Soft Skills</h3>
-        <div class="skill-item" *ngFor="let skill of SoftSkills">
-          <div class="skill-info">
-            <span class="skill-name">{{ skill.name }}</span>
-            <span class="skill-percentage">{{ skill.level }}%</span>
+
+
+          <!-- Database Skills -->
+          <div class="skill-category mb-4">
+            <h4 class="category-title mb-3"
+              style="font-size: 1.6rem; color: #fff; display: flex; align-items: center; gap: 0.8rem;">
+              <i class="fas fa-laptop-code" style="color: #00d4ff; font-size: 2rem;"></i>
+              Database & Tools
+            </h4>
+
+            <div class="skills-grid"
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+
+              <div class="skill-card" *ngFor="let skill of databaseSkills" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); 
+             padding: 1rem 1.2rem; 
+             border-radius: 12px; 
+             border: 1px solid #333; 
+             display: flex; 
+             align-items: center; 
+             gap: 1rem;">
+
+                <!-- Icon -->
+                <div class="skill-icon" style="font-size: 1.8rem; color: #00d4ff; min-width: 40px;">
+                  <i [class]="skill.icon"></i>
+                </div>
+
+                <!-- Info -->
+                <div class="skill-info" style="flex: 1;">
+                  <h5 class="skill-name" style="font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 0.3rem;">
+                    {{ skill.name }}
+                  </h5>
+                  <div class="skill-level" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div class="skill-progress" style="flex: 1; height: 6px; background: rgba(255, 255, 255, 0.1); 
+                   border-radius: 6px; overflow: hidden;">
+                      <div class="progress-fill" [style.width.%]="skill.level"
+                        style="height: 100%; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border-radius: 6px;">
+                      </div>
+                    </div>
+                    <span class="skill-percentage"
+                      style="font-size: 0.85rem; font-weight: 600; color: #00d4ff; min-width: 35px;">
+                      {{ skill.level }}%
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <div class="progress">
-            <div class="progress-bar" [style.width.%]="skill.level"></div>
+
+
+          <!-- Other Skills -->
+          <div class="skill-category mb-4">
+            <h4 class="category-title mb-3"
+              style="font-size: 1.6rem; color: #fff; display: flex; align-items: center; gap: 0.8rem;">
+              <i class="fas fa-laptop-code" style="color: #00d4ff; font-size: 2rem;"></i>
+              Other Skills
+            </h4>
+
+            <div class="skills-grid"
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+
+              <div class="skill-card" *ngFor="let skill of otherSkills" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); 
+             padding: 1rem 1.2rem; 
+             border-radius: 12px; 
+             border: 1px solid #333; 
+             display: flex; 
+             align-items: center; 
+             gap: 1rem;">
+
+                <!-- Icon -->
+                <div class="skill-icon" style="font-size: 1.8rem; color: #00d4ff; min-width: 40px;">
+                  <i [class]="skill.icon"></i>
+                </div>
+
+                <!-- Info -->
+                <div class="skill-info" style="flex: 1;">
+                  <h5 class="skill-name" style="font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 0.3rem;">
+                    {{ skill.name }}
+                  </h5>
+                  <div class="skill-level" style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div class="skill-progress" style="flex: 1; height: 6px; background: rgba(255, 255, 255, 0.1); 
+                   border-radius: 6px; overflow: hidden;">
+                      <div class="progress-fill" [style.width.%]="skill.level"
+                        style="height: 100%; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border-radius: 6px;">
+                      </div>
+                    </div>
+                    <span class="skill-percentage"
+                      style="font-size: 0.85rem; font-weight: 600; color: #00d4ff; min-width: 35px;">
+                      {{ skill.level }}%
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -183,119 +468,226 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="projects-section py-5">
-  <div class="container">
+<section id="projects" class="projects-section py-5" style="background: #0a0a0a; padding: 5rem 0;">
+  <div class="container-lg">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title"><u>My Projects</u></h2>
-        <p>The projects are not live yet but you can see my work on Youtube vieo by clicking on Youtube Demo</p>
-        <div class="title-underline"></div>
+        <h2 class="section-title"
+          style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Some Featured Projects</h2>
+        <div class="title-underline"
+          style="width: 80px; height: 4px; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); margin: 0 auto 2rem; border-radius: 2px;">
+        </div>
+        <p class="section-subtitle" style="font-size: 1.2rem; color: #b0b0b0; margin-bottom: 2rem;">Check out my latest
+          work on YouTube</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4 p-2" *ngFor="let project of projects">
-        <div class="project-card">
-          <div class="project-image">
-            <img [src]="project.image" [alt]="project.title" class="img-fluid">
-            <div class="project-overlay">
-              <div class="project-links">
-                <a [href]="project.DemoVideo" target="_blank" class="btn btn-light btn-sm me-2" *ngIf="project.DemoVideo">
-                  Youtube Demo
+    <div class="row justify-content-center g-0">
+      <div class="col-auto mb-4" *ngFor="let project of projects">
+        <div class="project-card" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+             border-radius: 20px;
+             overflow: hidden;
+             border: 1px solid #333;
+             width: 300px; /* fixed width for equal cards */
+             height: 100%;
+             position: relative;
+             margin: 0 auto;">
+          <!-- Project Image -->
+          <div class="project-image" style="position: relative; overflow: hidden; height: 250px;">
+            <img [src]="project.image" [alt]="project.title" class="img-fluid"
+              style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="project-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+                 background: rgba(0, 0, 0, 0.8);
+                 display: flex; align-items: center; justify-content: center;
+                 opacity: 0; transition: opacity 0.3s ease;">
+              <div class="project-actions">
+                <a [href]="project.DemoVideo" target="_blank" class="btn-demo"
+                  *ngIf="project.DemoVideo && project.DemoVideo !== 'Current Website'" style="background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%);
+                     color: #fff; padding: 1rem 2rem;
+                     border-radius: 50px;
+                     text-decoration: none; font-weight: 600;
+                     text-transform: uppercase; letter-spacing: 1px;
+                     display: inline-flex; align-items: center; gap: 0.5rem;">
+                  <i class="fab fa-youtube"></i>
+                  Watch Demo
                 </a>
               </div>
             </div>
           </div>
-          <div class="project-content">
-            <a [href]="project.DemoVideo" target="_blank" class="btn btn-warning btn-sm me-2" *ngIf="project.DemoVideo">
-                  See Demo
-                </a>
-            <h4 class="project-title">{{ project.title }}</h4>
-            <p class="project-description">{{ project.description }}</p>
-            <div class="project-tech">
-              <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+
+          <!-- Project Content -->
+          <div class="project-content" style="padding: 2rem; position: relative; z-index: 2;">
+            <h4 class="project-title" style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #fff;">
+              {{ project.title }}
+            </h4>
+            <p class="project-description" style="color: #b0b0b0; margin-bottom: 1.5rem; line-height: 1.6;">
+              {{ project.description }}
+            </p>
+            <div class="project-tech" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
+              <span class="tech-badge" *ngFor="let tech of project.technologies" style="background: rgba(0, 212, 255, 0.1);
+                   color: #00d4ff; padding: 0.5rem 1rem;
+                   border-radius: 20px;
+                   font-size: 0.85rem; font-weight: 500;
+                   border: 1px solid #00d4ff;">
+                {{ tech }}
+              </span>
+            </div>
+            <div class="project-footer text-center">
+              <a [href]="project.DemoVideo" target="_blank" class="btn btn-sm"
+                *ngIf="project.DemoVideo && project.DemoVideo !== 'Current Website'" style="background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%);
+                   border: none; color: #fff;
+                   padding: 0.5rem 1.5rem;
+                   border-radius: 25px;
+                   font-weight: 600; text-decoration: none;
+                   display: inline-flex; align-items: center; gap: 0.5rem;">
+                <i class="fab fa-youtube"></i> Demo
+              </a>
+              <span *ngIf="project.DemoVideo === 'Current Website'" style="background: rgba(255, 190, 11, 0.1);
+                   color: #ffbe0b; padding: 0.5rem 1.5rem;
+                   border-radius: 25px;
+                   font-size: 0.85rem; font-weight: 500;
+                   border: 1px solid #ffbe0b;">
+                Current Website
+              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- Resume Section -->
-<section id="resume" class="resume-section py-5">
-  <div class="container">
+<section id="resume" class="resume-section py-5" style="background: #1a1a1a; padding: 5rem 0;">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title text-black"><u>Resume</u></h2>
-        <div class="title-underline"></div>
+        <h2 class="section-title"
+          style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Education & Resume</h2>
+        <div class="title-underline"
+          style="width: 80px; height: 4px; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); margin: 0 auto 2rem; border-radius: 2px;">
+        </div>
       </div>
     </div>
-    <div class="row text-center">
-      <div class="col-lg-12 col-md-12 mb-4">
-        <h3 class="resume-category text-white">Education</h3>
-        <div class="timeline ms-2">
-          <!-- Add your education details -->
-          <div class="timeline-item">
-            <div class="timeline-date">2023-2027(Ongoing)</div>
-            <div class="timeline-content">
-              <h4>BS Software Engineering</h4>
-              <p class="institution">Lahore Garrison University</p>
-              <p class="description">3.4 CGPA</p>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="timeline" style="position: relative; padding: 2rem 0;">
+          <div class="timeline-line"
+            style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); transform: translateX(-50%);">
+          </div>
+          <div class="timeline-item"
+            style="position: relative; margin-bottom: 4rem; display: flex; align-items: center;">
+            <div class="timeline-marker"
+              style="position: absolute; left: 50%; width: 20px; height: 20px; background: #00d4ff; border-radius: 50%; transform: translateX(-50%); border: 4px solid #1a1a1a; box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);">
+            </div>
+            <div class="timeline-content"
+              style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); padding: 2rem; border-radius: 15px; border: 1px solid #333; width: 45%; margin-left: 55%;">
+              <div class="timeline-date"
+                style="color: #00d4ff; font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem;">2023-2027 (Ongoing)
+              </div>
+              <h4 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">BS Software Engineering</h4>
+              <p class="institution" style="color: #ffbe0b; font-weight: 600; margin-bottom: 1rem;">Lahore Garrison
+                University</p>
+              <p class="description" style="color: #b0b0b0; line-height: 1.6;">3.4 CGPA - Focusing on software
+                development, web technologies, and modern programming practices.</p>
             </div>
           </div>
         </div>
-      </div>
-      
-    </div>
-    <div class="row mt-4">
-      <div class="col-12 text-center">
-        <a href="/Rohan'sCV.pdf" class="btn btn-outline-warning text-white p-2 btn-lg">
-          Download Resume
-        </a>
+        <div class="text-center mt-5">
+          <a href="./Rohan'sCV.pdf" class="btn btn-lg" download="Rohan's Resume.pdf"
+            style="background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border: none; color: #fff; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="contact-section py-5">
-  <div class="container">
+<section id="contact" class="contact-section py-5" style="background: #0a0a0a; padding: 5rem 0;">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center mb-5">
-        <h2 class="section-title"><u>Get In Touch</u></h2>
-        <div class="title-underline"></div>
+        <h2 class="section-title"
+          style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+          Get In Touch</h2>
+        <div class="title-underline"
+          style="width: 80px; height: 4px; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); margin: 0 auto 2rem; border-radius: 2px;">
+        </div>
       </div>
     </div>
-    <div class="row ms-2">
-      <div class="col-lg-12 col-md-12 mb-4">
-        <h3 class="contact-title">Let's work together!</h3>
-        <p class="contact-description">
-          I'm always interested in new opportunities and exciting projects. 
-          Whether you have a project in mind or just want to chat about web development, 
-          feel free to reach out!
-        </p>
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:rohaanzaidy@gmail.com" target="_blank" class="text-dark text-decoration-none">rohaanzaidy&#64;gmail.com</a>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="contact-card"
+          style="background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); padding: 3rem; border-radius: 20px; border: 1px solid #333; text-align: center; position: relative; overflow: hidden;">
+          <h3 class="contact-title"
+            style="font-size: 2.5rem; color: #fff; margin-bottom: 2rem; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            Let's work together!</h3>
+          <p class="contact-description"
+            style="font-size: 1.2rem; color: #b0b0b0; margin-bottom: 3rem; line-height: 1.8;">
+            I'm always interested in new opportunities and exciting projects.
+            Whether you have a project in mind or just want to chat about web development,
+            feel free to reach out!
+          </p>
+
+          <div class="contact-methods"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+            <div class="contact-item"
+              style="display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: rgba(0, 212, 255, 0.05); border-radius: 15px; border: 1px solid #333;">
+              <div class="contact-icon"
+                style="width: 60px; height: 60px; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff;">
+                <a href="mailto:rohaanzaidy@gmail.com" class="text-muted"><i class="fas fa-envelope"></i></a>
+              </div>
+              <div class="contact-details">
+                <h5 style="color: #fff; margin-bottom: 0.5rem; font-weight: 600;">Email</h5>
+                <a href="mailto:rohaanzaidy@gmail.com" target="_blank"
+                  style="color: #b0b0b0; text-decoration: none;">rohaanzaidy&#64;gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item"
+              style="display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: rgba(0, 212, 255, 0.05); border-radius: 15px; border: 1px solid #333;">
+              <div class="contact-icon"
+                style="width: 60px; height: 60px; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff;">
+                <a href="https://wa.me/923219544606" class="text-muted"><i class="fab fa-whatsapp"></i></a>
+              </div>
+              <div class="contact-details">
+                <h5 style="color: #fff; margin-bottom: 0.5rem; font-weight: 600;">WhatsApp</h5>
+                <a href="https://wa.me/923219544606" target="_blank" style="color: #b0b0b0; text-decoration: none;">+92
+                  321 9544606</a>
+              </div>
+            </div>
+
+            <div class="contact-item"
+              style="display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: rgba(0, 212, 255, 0.05); border-radius: 15px; border: 1px solid #333;">
+              <div class="contact-icon"
+                style="width: 60px; height: 60px; background: linear-gradient(135deg, #00d4ff 0%, #ff006e 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff;">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h5 style="color: #fff; margin-bottom: 0.5rem; font-weight: 600;">Location</h5>
+                <span style="color: #b0b0b0;">Harbanspura Lahore</span>
+              </div>
+            </div>
           </div>
-          <div class="contact-item">
-            <a href="https://wa.me/923219544606" target="_blank" class="text-dark text-decoration-none">
-              <i class="fab fa-whatsapp"></i>+92 321 9544606
+
+          <div class="social-links" style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
+            <a href="https://www.linkedin.com/in/rohan-zaidy/" target="_blank" class="social-link"
+              style="position: relative; z-index: 10; width: 60px; height: 60px; background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); border: 2px solid #333; color: #b0b0b0; display: flex; align-items: center; justify-content: center; border-radius: 15px; text-decoration: none; font-size: 1.5rem; transition: all 0.3s ease;">
+              <i class="fab fa-linkedin"></i>
             </a>
+
+            <a href="https://github.com/RohanZaidy" target="_blank" class="social-link"
+              style="position: relative; z-index: 10; width: 60px; height: 60px; background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); border: 2px solid #333; color: #b0b0b0; display: flex; align-items: center; justify-content: center; border-radius: 15px; text-decoration: none; font-size: 1.5rem; transition: all 0.3s ease;">
+              <i class="fab fa-github"></i>
+            </a>
+
           </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Harbanspura Lahore</span>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/rohan-zaidy-03a0a4328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link text-black">
-            <i class="fab fa-linkedin fa-2x"></i>
-          </a>
-          <a href="https://github.com/RohanZaidy" target="_blank" class="social-link text-black">
-            <i class="fab fa-github fa-2x"></i>
-          </a>
+
+
         </div>
       </div>
     </div>
@@ -303,12 +695,12 @@
 </section>
 
 <!-- Footer -->
-<footer class="footer-section py-4">
-  <div class="container">
+<footer class="footer-section py-4" style="background: #1a1a1a; border-top: 1px solid #333;">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12 text-center">
-        <p class="footer-text text-black">
-          © 2025 Rohan Zaidy. Made with Angular 19
+        <p class="footer-text" style="margin: 0; color: #b0b0b0; font-size: 1rem;">
+          © 2025 Rohan Zaidy. Made with Angular 19 & Deployed on Vercel
         </p>
       </div>
     </div>
