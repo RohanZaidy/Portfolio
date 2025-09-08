@@ -1,59 +1,93 @@
-# Portfolio
+# Rohan Zaidy - Full Stack Developer Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
+Welcome to my personal portfolio! This repository contains the code for my modern, responsive portfolio website built with **Angular 19** and deployed on **Vercel**.  
 
-## Development server
+🌐 **Live Portfolio:** [https://rohanportfolio-nu.vercel.app/](https://rohanportfolio-nu.vercel.app/)  
+📂 **Source Code on GitHub:** [https://github.com/RohanZaidy/Portfolio](https://github.com/RohanZaidy/Portfolio.git)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 👋 About Me
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Hello, I'm **Rohan Zaidy**, a passionate Full Stack Developer specializing in the **MEAN stack** and **ASP.NET technologies**. I love building modern web applications and delivering innovative solutions.
 
-## Code scaffolding
+- **Experience:** 2+ years of learning & development  
+- **Projects Completed:** 10+  
+- **Technologies:** 8+ modern frameworks and tools  
+- **Dedication:** 100%  
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+I am actively seeking **job or internship opportunities** to apply my skills, contribute to real-world projects, and grow as a software developer.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 💻 Technical Skills
 
-```bash
-ng generate --help
-```
+### **MEAN Stack**
+- MongoDB, Express.js, Angular, Node.js  
 
-## Building
+### **Frontend**
+- Angular 85%, React 75%, HTML5 90%, CSS3 90%, TypeScript 85%, Bootstrap 5 90%  
 
-To build the project run:
+### **Backend**
+- Node.js 80%, Express.js 78%, ASP.NET Web API 85%, Entity Framework 85%, RESTful APIs 85%  
 
-```bash
-ng build
-```
+### **Database & Tools**
+- MongoDB 88%, SQL Server 90%, Git & GitHub 85%, Visual Studio 90%  
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### **Other Skills**
+- C++ 90%, Python 70%, OOP Concepts 85%, Data Structures 75%, UML Diagrams 80%
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📂 Featured Projects
 
-```bash
-ng test
-```
+### **University Event Management System**
+- Full-stack web app with Angular 19 & ASP.NET Web API  
+- Features: Event creation, student registration, real-time notifications, admin dashboard  
+- **Technologies:** Angular 19, ASP.NET Web API, Entity Framework, SQL Server, Bootstrap 5  
 
-## Running end-to-end tests
+### **Book Store Web Application**
+- E-commerce book store with ASP.NET Core MVC  
+- Features: Category-wise browsing, shopping cart, order management, user authentication  
+- **Technologies:** ASP.NET Core MVC, Entity Framework, SQL Server, Bootstrap 5, Identity Framework  
 
-For end-to-end (e2e) testing, run:
+### **Product Management Dashboard**
+- Angular 19 application for CRUD operations and smooth UI animations  
+- **Technologies:** Angular 19, TypeScript, Bootstrap 5  
 
-```bash
-ng e2e
-```
+### **Employee Management System**
+- Full-stack CRUD application with Angular 19 frontend & ASP.NET Core Web API backend  
+- Features: Employee data management, role-based access, search functionality  
+- **Technologies:** Angular 19, ASP.NET Core API, Entity Framework, SQL Server, Bootstrap 5  
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### **Modern Portfolio Website**
+- Fully responsive, modern portfolio showcasing projects and skills  
+- **Technologies:** Angular 19, TypeScript, CSS3, Bootstrap 5, Animations  
 
-## Additional Resources
+### **MEAN Stack Task Manager**
+- Full-stack Task Manager with Angular, Node.js + Express, and MongoDB  
+- Features: Create lists, manage tasks within each list  
+- **Technologies:** MongoDB, Express.js, Angular 19, Node.js  
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 🎓 Education
+
+**BS Software Engineering** (2023-2027, Ongoing)  
+**Lahore Garrison University**  
+- 3.4 CGPA  
+- Focus: Software development, web technologies, modern programming practices  
+
+---
+
+## 📫 Contact Me
+
+I’m always open to new opportunities and exciting projects! Feel free to reach out:  
+
+- **Email:** rohaanzaidy@gmail.com  
+- **WhatsApp:** +92 321 9544606  
+- **Location:** Harbanspura, Lahore  
+
+---
+
+© 2025 **Rohan Zaidy** – Built with Angular 19 & Deployed on Vercel
