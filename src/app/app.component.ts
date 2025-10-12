@@ -71,7 +71,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   // Other technical skills
   otherSkills: Skill[] = [
-    { name: 'C++', level: 90, icon: 'fas fa-code' },
+    { name: 'AI Models Integration', level: 80, icon: 'fas fa-robot' },
     { name: 'Python', level: 70, icon: 'fab fa-python' },
     { name: 'OOP Concepts', level: 85, icon: 'fas fa-cube' },
     { name: 'Data Structures', level: 75, icon: 'fas fa-project-diagram' },
@@ -80,6 +80,14 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   // Projects with updated descriptions
   projects: Project[] = [
+    {
+      title: 'AI Quiz Generator in MEAN Stack',
+      description: 'An innovative web application that leverages AI to generate quizzes based on user-provided topics. Built with MEAN Stack and Google Gemini AI model 2.5 flash.',
+      image: './Screenshot 2025-10-12 190139.png',
+      technologies: ['Angular 19', 'Express', 'Google Gemini 2.5 Flash', 'AI', 'Bootstrap 5'],
+      DemoVideo: 'https://youtu.be/A86VDBMPWlc',
+      githubUrl: '<!-- YOUR_PROJECT_GITHUB_URL -->'
+    },
     {
       title: 'University Event Management System',
       description: 'A comprehensive full-stack web application built with Angular 19 and ASP.NET Web API. Features include event creation, management, student registration, real-time notifications, and admin dashboard with analytics.',
