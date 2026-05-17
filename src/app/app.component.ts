@@ -45,11 +45,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   // Frontend skills with MEAN stack focus
   frontendSkills: Skill[] = [
     { name: 'Angular', level: 85, icon: 'fab fa-angular' },
-    {name: 'React', level: 75, icon: 'fab fa-react'},
+    {name: 'React', level: 85, icon: 'fab fa-react'},
     { name: 'HTML5', level: 90, icon: 'fab fa-html5' },
     { name: 'CSS3', level: 90, icon: 'fab fa-css3-alt' },
-    { name: 'TypeScript', level: 85, icon: 'fab fa-js-square' },
-    { name: 'Bootstrap 5', level: 90, icon: 'fab fa-bootstrap' },
+    { name: 'JS/TS', level: 85, icon: 'fab fa-js-square' },
+    { name: 'Bootstrap/Tailwind', level: 90, icon: 'fab fa-bootstrap' },
   ];
 
   // Backend skills including MEAN stack
